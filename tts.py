@@ -8,7 +8,7 @@
 Примеры:
   python3 tts.py --text                 # только выгрузить тексты в audio-text/ и посчитать символы
   python3 tts.py --voices               # список голосов в аккаунте
-  python3 tts.py --voice VOICE_ID       # записать уроки 1–4 в src/audio/*.mp3
+  python3 tts.py                        # записать уроки 1–4 голосом Maxim в src/audio/*.mp3
   python3 tts.py --voice VOICE_ID urok-2 # записать один урок
 
 Ключ: переменная окружения ELEVENLABS_API_KEY. В облачной сессии Claude ключ
@@ -191,7 +191,7 @@ def main():
     ap.add_argument("pages", nargs="*", default=DEFAULT_PAGES)
     ap.add_argument("--text", action="store_true", help="только выгрузить тексты и посчитать символы")
     ap.add_argument("--voices", action="store_true", help="показать голоса аккаунта")
-    ap.add_argument("--voice", help="ID голоса ElevenLabs")
+    ap.add_argument("--voice", default="6YjFofyVXU1ASguf2hTJ", help="ID голоса ElevenLabs (по умолчанию Maxim)")
     ap.add_argument("--speed", type=float, default=0.9, help="скорость речи, 0.7–1.2 (по умолчанию 0.9)")
     args = ap.parse_args()
 
