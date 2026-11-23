@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Урок 1. Первый разговор с ИИ — ИИ — это просто</title>
+<meta name="description" content="Что такое ИИ, как задать хороший вопрос, уточнить ответ и говорить с ИИ голосом.">
+<script>(function(){try{var d=document.documentElement;['size','contrast','spacing'].forEach(function(k){var v=localStorage.getItem('a11y-'+k);if(v)d.setAttribute('data-'+k,v);});}catch(e){}})();</script>
+<link rel="stylesheet" href="style.css">
+<script src="a11y.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#content">Перейти к содержанию</a>
+<header class="site-header">
+  <div class="inner">
+    <a class="logo" href="index.html">ИИ — это просто</a>
+    <nav class="site-nav" aria-label="Разделы">
+      <a href="pomoshchniku.html">Для помощника</a>
+      <a href="index.html#uroki">Уроки</a>
+      <a href="instrumenty.html">Инструменты</a>
+    </nav>
+    <button type="button" id="a11y-toggle" class="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel"><span aria-hidden="true">👁</span> Для слабовидящих</button>
+  </div>
+</header>
+<div id="a11y-panel" class="a11y-panel" hidden>
+  <div class="inner">
+    <fieldset>
+      <legend>Размер текста</legend>
+      <div class="option-row">
+        <button type="button" class="option" data-set="size" data-value="">А</button>
+        <button type="button" class="option size-2" data-set="size" data-value="2" aria-label="А плюс, крупнее">А+</button>
+        <button type="button" class="option size-3" data-set="size" data-value="3" aria-label="А два плюса, самый крупный">А++</button>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Цвета</legend>
+      <div class="option-row">
+        <button type="button" class="option" data-set="contrast" data-value="">Обычные</button>
+        <button type="button" class="option c-bw" data-set="contrast" data-value="bw">Чёрным по белому</button>
+        <button type="button" class="option c-wb" data-set="contrast" data-value="wb">Белым по чёрному</button>
+        <button type="button" class="option c-blue" data-set="contrast" data-value="blue">Синим по голубому</button>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Расстояние между буквами</legend>
+      <div class="option-row">
+        <button type="button" class="option" data-set="spacing" data-value="">Обычное</button>
+        <button type="button" class="option" data-set="spacing" data-value="wide">Увеличенное</button>
+      </div>
+    </fieldset>
+    <button type="button" class="option" id="a11y-reset">Вернуть как было</button>
+  </div>
+</div>
+<main id="content" tabindex="-1">
+<p class="meta">Встреча 1 из 4 · 40 минут</p>
+<h1>Первый разговор с ИИ</h1>
+<section class="listen-bar" aria-labelledby="listen-title">
+  <h2 id="listen-title">🔊 Прослушать</h2>
+  <p class="meta">Запись диктора:</p>
+  <audio controls preload="none" src="audio/urok-1.mp3">Ваш браузер не воспроизводит аудио.</audio>
+  <p class="meta">Или голосом вашего телефона, с подсветкой текста:</p>
+  <div class="tts-controls" hidden>
+    <button type="button" class="btn" id="tts-play">▶ Слушать страницу</button>
+    <button type="button" class="btn secondary" id="tts-stop" hidden>■ С начала</button>
+    <button type="button" class="btn secondary" id="tts-rate" aria-pressed="false">🐢 Медленнее</button>
+  </div>
+  <p class="tts-status meta" role="status" aria-live="polite"></p>
+</section>
+
+<p><strong>После урока вы сможете:</strong></p>
+<ul>
+  <li>открыть ИИ-помощник и задать ему вопрос;</li>
+  <li>попросить исправить ответ, если он не понравился;</li>
+  <li>спрашивать голосом, не набирая текст.</li>
+</ul>
+
+<div class="box helper">
+  <span class="box-title">Для помощника</span>
+  Приложение уже должно быть установлено, в аккаунт выполнен вход (см. <a href="pomoshchniku.html">подготовку</a>). Теории не больше 5 минут, затем сразу задание 1.
+</div>
+
+<h2>Что такое ИИ (за одну минуту)</h2>
+<p>Представьте <strong>очень начитанного собеседника</strong>. Он прочитал миллионы книг и сайтов, отвечает за несколько секунд и никогда не устаёт от вопросов, даже от сотого подряд.</p>
+<p>Но у него есть слабое место: иногда он <strong>уверенно ошибается</strong>, как человек, который много читал, но ничего не проверял. Поэтому важное мы будем проверять (это урок 3).</p>
+<div class="table-wrap" data-say="ИИ умеет: объяснить сложное простыми словами; написать письмо, поздравление или жалобу; посоветовать рецепт, подарок или план; прочитать фотографию. ИИ не умеет: знать о вас то, чего вы ему не сказали; гарантировать, что ответ верный; заменить врача, юриста или банк; позвонить вам или потратить ваши деньги.">
+<table>
+  <tr><th scope="col">ИИ умеет</th><th scope="col">ИИ не умеет</th></tr>
+  <tr><td>Объяснить сложное простыми словами</td><td>Знать о вас то, чего вы ему не сказали</td></tr>
+  <tr><td>Написать письмо, поздравление, жалобу</td><td>Гарантировать, что ответ верный</td></tr>
+  <tr><td>Посоветовать рецепт, подарок, план</td><td>Заменить врача, юриста или банк</td></tr>
+  <tr><td>Прочитать фотографию (урок 2)</td><td>Позвонить вам или потратить ваши деньги</td></tr>
+</table>
+</div>
+
+<h2>Как задать вопрос</h2>
+<ol class="steps">
+  <li>Откройте приложение. Внизу есть поле для текста.</li>
+  <li>Нажмите на поле и напишите вопрос.</li>
+  <li>Нажмите кнопку отправки (обычно это стрелка).</li>
+  <li>Прочитайте ответ. Если он не понравился, <strong>напишите, что исправить</strong>. ИИ помнит весь разговор.</li>
+</ol>
+
+<h3>Секрет хорошего вопроса</h3>
+<p>Чем больше подробностей, тем лучше ответ. Сравните:</p>
+<p>❌ Плохо:</p>
+<span class="prompt">Рецепт</span>
+<p>✅ Хорошо:</p>
+<span class="prompt">У меня есть кабачок, два яйца и кусок сыра. Что приготовить на ужин на двоих за 30 минут? Напиши по шагам.</span>
+<p>Хороший вопрос отвечает на три вопроса: <strong>что у меня есть</strong>, <strong>что мне нужно</strong>, <strong>каким должен быть ответ</strong> (коротко, по пунктам, простыми словами).</p>
+
+<h3>Волшебные уточнения</h3>
+<p>Если ответ не подошёл, не начинайте сначала. Напишите прямо в том же разговоре:</p>
+<ul>
+  <li><em>«Короче»</em> или <em>«Ответь в 3 пунктах»</em></li>
+  <li><em>«Проще, без сложных слов»</em></li>
+  <li><em>«А если у меня нет духовки?»</em></li>
+  <li><em>«Дай ещё 3 варианта»</em></li>
+</ul>
+
+<h2>Говорите голосом</h2>
+<p>Печатать на телефоне долго. Почти в любой клавиатуре есть значок <strong>микрофона 🎤</strong>:</p>
+<ol class="steps">
+  <li>Нажмите на поле для текста, появится клавиатура.</li>
+  <li>Найдите значок микрофона на клавиатуре и нажмите на него.</li>
+  <li>Говорите спокойно, как с человеком. Текст появится сам.</li>
+  <li>Проверьте текст и нажмите «отправить».</li>
+</ol>
+<p class="meta">Знаки препинания можно не произносить, ИИ поймёт и так.</p>
+
+<h2>Задания</h2>
+<div class="task">
+  <h3>Задание 1. Ужин из того, что есть</h3>
+  <p>Загляните в холодильник и напишите ИИ, что там лежит:</p>
+  <span class="prompt">У меня есть [перечислите продукты]. Что приготовить на ужин? Не больше 30 минут, напиши по шагам.</span>
+  <p>Теперь уточните: <em>«А без духовки?»</em> или <em>«А если на одного?»</em></p>
+</div>
+<div class="task">
+  <h3>Задание 2. Объясни непонятное слово</h3>
+  <p>Вспомните слово из новостей или от внуков, которое непонятно. Например, «кешбэк», «самозанятый», «стрим».</p>
+  <span class="prompt">Объясни простыми словами, без иностранных терминов, что такое кешбэк. Приведи пример из жизни.</span>
+</div>
+<div class="task">
+  <h3>Задание 3. Голосом</h3>
+  <p>Нажмите на микрофон и спросите голосом:</p>
+  <span class="prompt">Чем занять внуков 7 и 10 лет на даче, если весь день идёт дождь? Предложи 5 идей без телефона и телевизора.</span>
+</div>
+<div class="box star">
+  <span class="box-title">★ Для тех, кому уже легко</span>
+  <p>ИИ может сыграть роль. Попробуйте:</p>
+  <span class="prompt">Давай поговорим на английском. Я начинающий. Задавай мне простые вопросы по одному и мягко исправляй мои ошибки.</span>
+  <p>Или: <em>«Ты экскурсовод по Казани. Расскажи, что посмотреть за один день, и спрашивай, что мне интереснее».</em></p>
+</div>
+
+<div class="box safety">
+  <span class="box-title">⚠️ Правило безопасности</span>
+  Всё, что вы пишете ИИ, попадает на сервер компании. <strong>Никогда не сообщайте ИИ</strong> номер паспорта, номер карты, пароли и коды из СМС. Для хорошего ответа они не нужны.
+</div>
+
+<h2>Домашнее задание на неделю</h2>
+<ol>
+  <li>Каждый день задавайте ИИ <strong>хотя бы один</strong> вопрос. Любой: когда сажать рассаду, что почитать, чем кормить кошку.</li>
+  <li>Хотя бы раз попросите ИИ исправить ответ («короче», «проще»).</li>
+  <li>Хотя бы раз спросите голосом.</li>
+</ol>
+
+<div class="btn-row no-print">
+  <a class="btn" href="shpargalka-1.html">Шпаргалка для печати</a>
+</div>
+
+<nav class="pager" aria-label="Уроки">
+  <a href="index.html">← Все уроки</a>
+  <a href="urok-2.html">Урок 2. ИИ понимает фотографии →</a>
+</nav>
+</main>
+<footer class="site-footer">
+  <div class="inner">
+    ИИ — это просто — бесплатные уроки по ИИ для людей старшего возраста и их близких.
+    Материалы можно свободно печатать и раздавать.
+  </div>
+</footer>
+</body>
+</html>
