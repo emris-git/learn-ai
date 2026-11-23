@@ -5,9 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ИИ — это просто</title>
 <meta name="description" content="Бесплатные уроки: как за 4 встречи научить родителей пользоваться ИИ-помощником и защититься от мошенников.">
+<script>(function(){try{var d=document.documentElement;['size','contrast','spacing'].forEach(function(k){var v=localStorage.getItem('a11y-'+k);if(v)d.setAttribute('data-'+k,v);});}catch(e){}})();</script>
 <link rel="stylesheet" href="style.css">
+<script src="a11y.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#content">Перейти к содержанию</a>
 <header class="site-header">
   <div class="inner">
     <a class="logo" href="index.html">ИИ — это просто</a>
@@ -16,10 +19,49 @@
       <a href="index.html#uroki">Уроки</a>
       <a href="instrumenty.html">Инструменты</a>
     </nav>
+    <button type="button" id="a11y-toggle" class="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel"><span aria-hidden="true">👁</span> Для слабовидящих</button>
   </div>
 </header>
-<main>
+<div id="a11y-panel" class="a11y-panel" hidden>
+  <div class="inner">
+    <fieldset>
+      <legend>Размер текста</legend>
+      <div class="option-row">
+        <button type="button" class="option" data-set="size" data-value="">А</button>
+        <button type="button" class="option size-2" data-set="size" data-value="2" aria-label="А плюс, крупнее">А+</button>
+        <button type="button" class="option size-3" data-set="size" data-value="3" aria-label="А два плюса, самый крупный">А++</button>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Цвета</legend>
+      <div class="option-row">
+        <button type="button" class="option" data-set="contrast" data-value="">Обычные</button>
+        <button type="button" class="option c-bw" data-set="contrast" data-value="bw">Чёрным по белому</button>
+        <button type="button" class="option c-wb" data-set="contrast" data-value="wb">Белым по чёрному</button>
+        <button type="button" class="option c-blue" data-set="contrast" data-value="blue">Синим по голубому</button>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Расстояние между буквами</legend>
+      <div class="option-row">
+        <button type="button" class="option" data-set="spacing" data-value="">Обычное</button>
+        <button type="button" class="option" data-set="spacing" data-value="wide">Увеличенное</button>
+      </div>
+    </fieldset>
+    <button type="button" class="option" id="a11y-reset">Вернуть как было</button>
+  </div>
+</div>
+<main id="content" tabindex="-1">
 <h1>ИИ — это просто. 4 встречи, чтобы уверенно пользоваться ИИ-помощником</h1>
+<section class="listen-bar" aria-labelledby="listen-title">
+  <h2 id="listen-title">🔊 Прослушать</h2>
+  <div class="tts-controls" hidden>
+    <button type="button" class="btn" id="tts-play">▶ Слушать страницу</button>
+    <button type="button" class="btn secondary" id="tts-stop" hidden>■ С начала</button>
+    <button type="button" class="btn secondary" id="tts-rate" aria-pressed="false">🐢 Медленнее</button>
+  </div>
+  <p class="tts-status meta" role="status" aria-live="polite"></p>
+</section>
 <p class="lead">Бесплатные уроки для людей старшего возраста и для тех, кто им помогает: детей, внуков, друзей. Никаких сложных слов, только практика на бытовых задачах.</p>
 
 <div class="btn-row">

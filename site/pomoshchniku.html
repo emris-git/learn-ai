@@ -5,27 +5,69 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Для помощника — ИИ — это просто</title>
 <meta name="description" content="Как научить родителей пользоваться ИИ за 4 встречи: подготовка телефона, правила занятий, частые трудности.">
+<script>(function(){try{var d=document.documentElement;['size','contrast','spacing'].forEach(function(k){var v=localStorage.getItem('a11y-'+k);if(v)d.setAttribute('data-'+k,v);});}catch(e){}})();</script>
 <link rel="stylesheet" href="style.css">
+<script src="a11y.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#content">Перейти к содержанию</a>
 <header class="site-header">
   <div class="inner">
     <a class="logo" href="index.html">ИИ — это просто</a>
     <nav class="site-nav" aria-label="Разделы">
-      <a href="pomoshchniku.html">Для помощника</a>
+      <a href="pomoshchniku.html" aria-current="page">Для помощника</a>
       <a href="index.html#uroki">Уроки</a>
       <a href="instrumenty.html">Инструменты</a>
     </nav>
+    <button type="button" id="a11y-toggle" class="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel"><span aria-hidden="true">👁</span> Для слабовидящих</button>
   </div>
 </header>
-<main>
+<div id="a11y-panel" class="a11y-panel" hidden>
+  <div class="inner">
+    <fieldset>
+      <legend>Размер текста</legend>
+      <div class="option-row">
+        <button type="button" class="option" data-set="size" data-value="">А</button>
+        <button type="button" class="option size-2" data-set="size" data-value="2" aria-label="А плюс, крупнее">А+</button>
+        <button type="button" class="option size-3" data-set="size" data-value="3" aria-label="А два плюса, самый крупный">А++</button>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Цвета</legend>
+      <div class="option-row">
+        <button type="button" class="option" data-set="contrast" data-value="">Обычные</button>
+        <button type="button" class="option c-bw" data-set="contrast" data-value="bw">Чёрным по белому</button>
+        <button type="button" class="option c-wb" data-set="contrast" data-value="wb">Белым по чёрному</button>
+        <button type="button" class="option c-blue" data-set="contrast" data-value="blue">Синим по голубому</button>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Расстояние между буквами</legend>
+      <div class="option-row">
+        <button type="button" class="option" data-set="spacing" data-value="">Обычное</button>
+        <button type="button" class="option" data-set="spacing" data-value="wide">Увеличенное</button>
+      </div>
+    </fieldset>
+    <button type="button" class="option" id="a11y-reset">Вернуть как было</button>
+  </div>
+</div>
+<main id="content" tabindex="-1">
 <h1>Как научить родителей пользоваться ИИ за 4 встречи</h1>
+<section class="listen-bar" aria-labelledby="listen-title">
+  <h2 id="listen-title">🔊 Прослушать</h2>
+  <div class="tts-controls" hidden>
+    <button type="button" class="btn" id="tts-play">▶ Слушать страницу</button>
+    <button type="button" class="btn secondary" id="tts-stop" hidden>■ С начала</button>
+    <button type="button" class="btn secondary" id="tts-rate" aria-pressed="false">🐢 Медленнее</button>
+  </div>
+  <p class="tts-status meta" role="status" aria-live="polite"></p>
+</section>
 <p class="lead">Эта страница для детей, внуков и друзей, которые помогают. Ваша задача не прочитать лекцию, а сделать так, чтобы через месяц человек сам открывал ИИ-помощника, когда ему что-то нужно.</p>
 
 <h2>План</h2>
-<div class="table-wrap">
+<div class="table-wrap" data-say="Встреча первая: первый разговор с ИИ. Результат — человек сам задаёт вопрос голосом и уточняет ответ. Встреча вторая: ИИ понимает фотографии. Результат — сам отправляет фото с вопросом. Встреча третья: можно ли верить ИИ, мошенники. Результат — знает, как проверить ответ, в семье есть кодовое слово. Встреча четвёртая: ИИ в повседневных делах. Результат — решил с помощью ИИ свою настоящую задачу.">
 <table>
-  <tr><th>Встреча</th><th>Тема</th><th>Результат</th></tr>
+  <tr><th scope="col">Встреча</th><th scope="col">Тема</th><th scope="col">Результат</th></tr>
   <tr><td>1</td><td><a href="urok-1.html">Первый разговор с ИИ</a></td><td>Сам задаёт вопрос голосом и уточняет ответ</td></tr>
   <tr><td>2</td><td><a href="urok-2.html">ИИ понимает фотографии</a></td><td>Сам отправляет фото с вопросом</td></tr>
   <tr><td>3</td><td><a href="urok-3.html">Можно ли верить ИИ. Мошенники</a></td><td>Знает, как проверить ответ. В семье есть кодовое слово</td></tr>
@@ -64,9 +106,9 @@
 </ul>
 
 <h2>Частые трудности</h2>
-<div class="table-wrap">
+<div class="table-wrap" data-say="Если слышите «Я боюсь что-то сломать» — покажите, что любой разговор можно начать заново, и предложите специально задать глупый вопрос. «Мне это не нужно» — не спорьте, начните с его задачи: квитанция, лекарство, дача, внуки. «Он ответил не то» — отличный момент учиться уточнять. «А он за мной не шпионит?» — честно скажите, что всё уходит на сервер компании, поэтому есть правило: никаких паспортов, карт и кодов. «Забыл, как открыть» — значок на главном экране и шпаргалка на холодильнике. «Слишком длинно отвечает» — научите добавлять в вопрос: ответь коротко, три–пять пунктов.">
 <table>
-  <tr><th>Что слышите</th><th>Что помогает</th></tr>
+  <tr><th scope="col">Что слышите</th><th scope="col">Что помогает</th></tr>
   <tr><td>«Я боюсь что-то сломать»</td><td>Покажите, что любой разговор можно начать заново. Предложите специально задать глупый вопрос.</td></tr>
   <tr><td>«Мне это не нужно»</td><td>Не спорьте, начните с его задачи: квитанция, лекарство, дача, внуки. Польза убеждает лучше слов.</td></tr>
   <tr><td>«Он ответил не то»</td><td>Отличный момент учиться: «Давай уточним». Это главный навык <a href="urok-1.html">первого урока</a>.</td></tr>

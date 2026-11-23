@@ -5,21 +5,63 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Инструменты — ИИ — это просто</title>
 <meta name="description" content="Какой ИИ-помощник выбрать в России: что работает без VPN, что понимает фотографии, как выбрать основной и запасной.">
+<script>(function(){try{var d=document.documentElement;['size','contrast','spacing'].forEach(function(k){var v=localStorage.getItem('a11y-'+k);if(v)d.setAttribute('data-'+k,v);});}catch(e){}})();</script>
 <link rel="stylesheet" href="style.css">
+<script src="a11y.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#content">Перейти к содержанию</a>
 <header class="site-header">
   <div class="inner">
     <a class="logo" href="index.html">ИИ — это просто</a>
     <nav class="site-nav" aria-label="Разделы">
       <a href="pomoshchniku.html">Для помощника</a>
       <a href="index.html#uroki">Уроки</a>
-      <a href="instrumenty.html">Инструменты</a>
+      <a href="instrumenty.html" aria-current="page">Инструменты</a>
     </nav>
+    <button type="button" id="a11y-toggle" class="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel"><span aria-hidden="true">👁</span> Для слабовидящих</button>
   </div>
 </header>
-<main>
+<div id="a11y-panel" class="a11y-panel" hidden>
+  <div class="inner">
+    <fieldset>
+      <legend>Размер текста</legend>
+      <div class="option-row">
+        <button type="button" class="option" data-set="size" data-value="">А</button>
+        <button type="button" class="option size-2" data-set="size" data-value="2" aria-label="А плюс, крупнее">А+</button>
+        <button type="button" class="option size-3" data-set="size" data-value="3" aria-label="А два плюса, самый крупный">А++</button>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Цвета</legend>
+      <div class="option-row">
+        <button type="button" class="option" data-set="contrast" data-value="">Обычные</button>
+        <button type="button" class="option c-bw" data-set="contrast" data-value="bw">Чёрным по белому</button>
+        <button type="button" class="option c-wb" data-set="contrast" data-value="wb">Белым по чёрному</button>
+        <button type="button" class="option c-blue" data-set="contrast" data-value="blue">Синим по голубому</button>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Расстояние между буквами</legend>
+      <div class="option-row">
+        <button type="button" class="option" data-set="spacing" data-value="">Обычное</button>
+        <button type="button" class="option" data-set="spacing" data-value="wide">Увеличенное</button>
+      </div>
+    </fieldset>
+    <button type="button" class="option" id="a11y-reset">Вернуть как было</button>
+  </div>
+</div>
+<main id="content" tabindex="-1">
 <h1>Какой ИИ-помощник выбрать</h1>
+<section class="listen-bar" aria-labelledby="listen-title">
+  <h2 id="listen-title">🔊 Прослушать</h2>
+  <div class="tts-controls" hidden>
+    <button type="button" class="btn" id="tts-play">▶ Слушать страницу</button>
+    <button type="button" class="btn secondary" id="tts-stop" hidden>■ С начала</button>
+    <button type="button" class="btn secondary" id="tts-rate" aria-pressed="false">🐢 Медленнее</button>
+  </div>
+  <p class="tts-status meta" role="status" aria-live="polite"></p>
+</section>
 <p class="lead">Все задания на сайте работают в любом из этих помощников. Выберите <strong>один основной и один запасной</strong>. Больше не нужно, иначе легко запутаться.</p>
 
 <div class="box helper">
@@ -28,9 +70,9 @@
 </div>
 
 <h2>Как выбрать за 30 секунд</h2>
-<div class="table-wrap">
+<div class="table-wrap" data-say="Если не знаете, что выбрать: основной помощник — DeepSeek, запасной — Алиса или GigaChat. Если хотите только российские сервисы: основной — Алиса, запасной — GigaChat. Если не доверяете Яндексу и Сберу: основной — DeepSeek, запасной — Qwen. Если много фотографий растений и предметов: основной — Алиса или Qwen, запасной — GigaChat.">
 <table>
-  <tr><th>Ситуация</th><th>Основной</th><th>Запасной</th></tr>
+  <tr><th scope="col">Ситуация</th><th scope="col">Основной</th><th scope="col">Запасной</th></tr>
   <tr><td>Не знаю, что выбрать</td><td>DeepSeek</td><td>Алиса или GigaChat</td></tr>
   <tr><td>Хочу только российские сервисы</td><td>Алиса</td><td>GigaChat</td></tr>
   <tr><td>Не доверяю Яндексу и Сберу</td><td>DeepSeek</td><td>Qwen</td></tr>
@@ -39,9 +81,9 @@
 </div>
 
 <h2>Работают без VPN</h2>
-<div class="table-wrap">
+<div class="table-wrap" data-say="DeepSeek — китайская компания. Читает текст с фото, сильные ответы на текстовые вопросы, бесплатно. Алиса — Яндекс, Россия. Понимает фото, знает российские реалии, удобный голосовой ввод. GigaChat — Сбер, Россия. Понимает фото, знает российские реалии, вход через Сбер ID. Qwen — китайская компания Alibaba. Хорошо понимает изображения, интерфейс может быть частично на английском.">
 <table>
-  <tr><th>Помощник</th><th>Чья компания</th><th>Фото</th><th>Особенности</th></tr>
+  <tr><th scope="col">Помощник</th><th scope="col">Чья компания</th><th scope="col">Фото</th><th scope="col">Особенности</th></tr>
   <tr><td><strong>DeepSeek</strong></td><td>Китай</td><td>Читает текст с фото<sup>*</sup></td><td>Сильные ответы на текстовые вопросы, бесплатно. Хорош для объяснений и писем</td></tr>
   <tr><td><strong>Алиса</strong></td><td>Яндекс, Россия</td><td>Да</td><td>Знает российские реалии, удобный голосовой ввод</td></tr>
   <tr><td><strong>GigaChat</strong></td><td>Сбер, Россия</td><td>Да</td><td>Знает российские реалии, вход через Сбер ID</td></tr>
