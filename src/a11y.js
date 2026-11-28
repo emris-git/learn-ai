@@ -115,7 +115,7 @@
     }
   }
   function setButtons() {
-    playBtn.textContent = playing ? "⏸ Пауза" : (index > 0 ? "▶ Продолжить" : "▶ Слушать страницу");
+    playBtn.textContent = playing ? "⏸ Пауза" : (index > 0 ? "▶ Продолжить" : "▶ " + (playBtn.dataset.label || "Слушать страницу"));
     playBtn.setAttribute("aria-pressed", String(playing));
     stopBtn.hidden = !(playing || index > 0);
   }
@@ -155,7 +155,7 @@
   rateBtn.addEventListener("click", function () {
     slow = !slow;
     rateBtn.setAttribute("aria-pressed", String(slow));
-    rateBtn.textContent = slow ? "🐢 Медленно: включено" : "🐢 Медленнее";
+    rateBtn.textContent = slow ? "✓ Медленно" : "Медленнее";
     if (playing) { synth.cancel(); speakNext(); }
   });
   /* Если на странице есть запись диктора, не даём двум голосам звучать одновременно */

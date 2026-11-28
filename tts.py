@@ -110,6 +110,7 @@ def speakable(text):
 
 def narration(page: str) -> list[str]:
     html = (SRC / f"{page}.html").read_text(encoding="utf-8")
+    html = re.sub(r"\{\{icon:[a-z]+\}\}", "", html)  # иконки не озвучиваются
     tree = Tree()
     tree.feed(html)
     blocks = []

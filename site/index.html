@@ -4,100 +4,131 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ИИ — это просто</title>
-<meta name="description" content="Бесплатные уроки: как за 4 встречи научить родителей пользоваться ИИ-помощником и защититься от мошенников.">
+<meta name="description" content="Бесплатные уроки: как за 4 встречи научиться пользоваться ИИ-помощником и защититься от мошенников.">
+<meta name="theme-color" content="#1f5fa8">
 <script>(function(){try{var d=document.documentElement;['size','contrast','spacing'].forEach(function(k){var v=localStorage.getItem('a11y-'+k);if(v)d.setAttribute('data-'+k,v);});}catch(e){}})();</script>
 <link rel="stylesheet" href="style.css">
 <script src="a11y.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#content">Перейти к содержанию</a>
-<header class="site-header">
+<div class="topbar">
   <div class="inner">
-    <a class="logo" href="index.html">ИИ — это просто</a>
-    <nav class="site-nav" aria-label="Разделы">
-      <a href="pomoshchniku.html">Для помощника</a>
-      <a href="index.html#uroki">Уроки</a>
-      <a href="instrumenty.html">Инструменты</a>
-    </nav>
-    <button type="button" id="a11y-toggle" class="a11y-toggle" aria-expanded="false" aria-controls="a11y-panel"><span aria-hidden="true">👁</span> Для слабовидящих</button>
+    <button type="button" id="a11y-toggle" class="topbar-btn" aria-expanded="false" aria-controls="a11y-panel"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg> Версия для слабовидящих</button>
   </div>
-</header>
+</div>
 <div id="a11y-panel" class="a11y-panel" hidden>
   <div class="inner">
-    <fieldset>
-      <legend>Размер текста</legend>
-      <div class="option-row">
-        <button type="button" class="option" data-set="size" data-value="">А</button>
-        <button type="button" class="option size-2" data-set="size" data-value="2" aria-label="А плюс, крупнее">А+</button>
-        <button type="button" class="option size-3" data-set="size" data-value="3" aria-label="А два плюса, самый крупный">А++</button>
-      </div>
-    </fieldset>
-    <fieldset>
-      <legend>Цвета</legend>
-      <div class="option-row">
-        <button type="button" class="option" data-set="contrast" data-value="">Обычные</button>
-        <button type="button" class="option c-bw" data-set="contrast" data-value="bw">Чёрным по белому</button>
-        <button type="button" class="option c-wb" data-set="contrast" data-value="wb">Белым по чёрному</button>
-        <button type="button" class="option c-blue" data-set="contrast" data-value="blue">Синим по голубому</button>
-      </div>
-    </fieldset>
-    <fieldset>
-      <legend>Расстояние между буквами</legend>
-      <div class="option-row">
-        <button type="button" class="option" data-set="spacing" data-value="">Обычное</button>
-        <button type="button" class="option" data-set="spacing" data-value="wide">Увеличенное</button>
-      </div>
-    </fieldset>
-    <button type="button" class="option" id="a11y-reset">Вернуть как было</button>
+    <div class="a11y-grid">
+      <fieldset>
+        <legend>Размер текста</legend>
+        <div class="option-row">
+          <button type="button" class="option" data-set="size" data-value="">А</button>
+          <button type="button" class="option size-2" data-set="size" data-value="2" aria-label="А плюс, крупнее">А+</button>
+          <button type="button" class="option size-3" data-set="size" data-value="3" aria-label="А два плюса, самый крупный">А++</button>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Цвета</legend>
+        <div class="option-row">
+          <button type="button" class="option" data-set="contrast" data-value="">Обычные</button>
+          <button type="button" class="option c-bw" data-set="contrast" data-value="bw">Чёрным по белому</button>
+          <button type="button" class="option c-wb" data-set="contrast" data-value="wb">Белым по чёрному</button>
+          <button type="button" class="option c-blue" data-set="contrast" data-value="blue">Синим по голубому</button>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Расстояние между буквами</legend>
+        <div class="option-row">
+          <button type="button" class="option" data-set="spacing" data-value="">Обычное</button>
+          <button type="button" class="option" data-set="spacing" data-value="wide">Увеличенное</button>
+        </div>
+      </fieldset>
+    </div>
+    <button type="button" class="link-btn" id="a11y-reset">Вернуть как было</button>
   </div>
 </div>
+<header class="site-header">
+  <div class="inner">
+    <a class="logo" href="index.html" aria-label="ИИ — это просто — на главную"><span class="logo-mark" aria-hidden="true">ИИ</span><span class="logo-text">это просто</span></a>
+    <nav class="site-nav" aria-label="Разделы">
+      <a href="index.html#uroki"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span>Уроки</span></a>
+      <a href="pomoshchniku.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Учу родителей</span></a>
+      <a href="instrumenty.html"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Какой ИИ выбрать</span></a>
+    </nav>
+  </div>
+</header>
 <main id="content" tabindex="-1">
-<h1>ИИ — это просто. 4 встречи, чтобы уверенно пользоваться ИИ-помощником</h1>
-<section class="listen-bar" aria-labelledby="listen-title">
-  <h2 id="listen-title">🔊 Прослушать</h2>
-  <div class="tts-controls" hidden>
-    <button type="button" class="btn" id="tts-play">▶ Слушать страницу</button>
-    <button type="button" class="btn secondary" id="tts-stop" hidden>■ С начала</button>
-    <button type="button" class="btn secondary" id="tts-rate" aria-pressed="false">🐢 Медленнее</button>
-  </div>
-  <p class="tts-status meta" role="status" aria-live="polite"></p>
+<section class="hero">
+  <p class="eyebrow">Бесплатно · без VPN · без сложных слов</p>
+  <h1>Научиться пользоваться ИИ за&nbsp;4&nbsp;встречи</h1>
+  <p class="lead">Уроки для людей старшего возраста и для тех, кто им помогает. Только практика на бытовых задачах: квитанции, лекарства, письма, внуки.</p>
 </section>
-<p class="lead">Бесплатные уроки для людей старшего возраста и для тех, кто им помогает: детей, внуков, друзей. Никаких сложных слов, только практика на бытовых задачах.</p>
 
-<div class="btn-row">
-  <a class="btn" href="pomoshchniku.html">Я помогаю родителям</a>
-  <a class="btn secondary" href="urok-1.html">Я учусь сам(а)</a>
+<h2 class="choices-title">С чего начать?</h2>
+<div class="choices">
+  <a class="choice" href="urok-1.html">
+    <span class="choice-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg></span>
+    <span class="choice-body"><strong>Я хочу научиться сам(а)</strong><span>Начните с первого урока. Его можно читать или слушать.</span></span>
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+  </a>
+  <a class="choice" href="pomoshchniku.html">
+    <span class="choice-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+    <span class="choice-body"><strong>Я помогаю родителям</strong><span>План из 4 встреч, подготовка телефона и ответы на «а зачем мне это».</span></span>
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+  </a>
 </div>
 
-<h2>Что вы будете уметь после 4 встреч</h2>
-<ul>
-  <li>Задавать ИИ вопросы голосом и текстом и получать понятные ответы.</li>
-  <li>Сфотографировать квитанцию, инструкцию к лекарству или больное растение и получить объяснение.</li>
-  <li>Понимать, когда ИИ ошибается, и проверять важное.</li>
-  <li>Распознавать мошенников, которые подделывают голоса близких.</li>
-  <li>Писать с помощью ИИ письма, жалобы, поздравления и даже книгу воспоминаний для внуков.</li>
+<h2 id="uroki">Уроки по порядку</h2>
+<ol class="path">
+  <li><a class="path-item" href="urok-1.html">
+    <span class="path-num">1</span>
+    <span class="path-body"><span class="path-meta"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> 40 минут</span><strong>Первый разговор с ИИ</strong><span>Что такое ИИ, как задать вопрос и уточнить ответ, голосовой ввод</span></span>
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+  </a></li>
+  <li><a class="path-item" href="urok-2.html">
+    <span class="path-num">2</span>
+    <span class="path-body"><span class="path-meta"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg> 40 минут</span><strong>ИИ понимает фотографии</strong><span>Квитанции, лекарства, растения, непонятные сообщения на экране</span></span>
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+  </a></li>
+  <li><a class="path-item" href="urok-3.html">
+    <span class="path-num">3</span>
+    <span class="path-body"><span class="path-meta"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> 50 минут</span><strong>Можно ли верить ИИ. Мошенники</strong><span>Как проверять ответы и не попасться на поддельный голос</span></span>
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+  </a></li>
+  <li><a class="path-item" href="urok-4.html">
+    <span class="path-num">4</span>
+    <span class="path-body"><span class="path-meta"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg> 50 минут</span><strong>ИИ в повседневных делах</strong><span>Письма, поздравления, анализы, книга воспоминаний</span></span>
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+  </a></li>
+</ol>
+
+<h2>Что вы будете уметь</h2>
+<ul class="checks">
+  <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg> Задавать ИИ вопросы голосом и текстом и получать понятные ответы</li>
+  <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg> Разбираться в квитанции, инструкции к лекарству или больном растении по фото</li>
+  <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg> Понимать, когда ИИ ошибается, и проверять важное</li>
+  <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg> Распознавать мошенников, которые подделывают голоса близких</li>
+  <li><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg> Писать письма, жалобы, поздравления и книгу воспоминаний для внуков</li>
 </ul>
 
-<h2 id="uroki">Уроки</h2>
-<div class="cards">
-  <a class="card" href="urok-1.html"><span class="num">Встреча 1</span><strong>Первый разговор с ИИ</strong><span>Что такое ИИ, как задать вопрос и уточнить ответ, голосовой ввод</span></a>
-  <a class="card" href="urok-2.html"><span class="num">Встреча 2</span><strong>ИИ понимает фотографии</strong><span>Квитанции, лекарства, растения, непонятные сообщения на экране</span></a>
-  <a class="card" href="urok-3.html"><span class="num">Встреча 3</span><strong>Можно ли верить ИИ. Мошенники</strong><span>Как проверять ответы и не попасться на поддельный голос</span></a>
-  <a class="card" href="urok-4.html"><span class="num">Встреча 4</span><strong>ИИ в повседневных делах</strong><span>Письма, поздравления, анализы, книга воспоминаний</span></a>
+<h2>Как устроены уроки</h2>
+<div class="features">
+  <div class="feature"><span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/></svg></span><strong>Можно слушать</strong><span>Каждый урок прочитан диктором. Ещё его может читать вслух сам телефон.</span></div>
+  <div class="feature"><span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></span><strong>Шпаргалка на холодильник</strong><span>К каждому уроку есть лист A4 крупным шрифтом.</span></div>
+  <div class="feature"><span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span><strong>Любой ИИ-помощник</strong><span>Задания работают в любом сервисе. <a href="instrumenty.html">Какой выбрать</a></span></div>
+  <div class="feature"><span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><strong>Безопасность в каждом уроке</strong><span>Что можно рассказывать ИИ, а что нельзя никогда.</span></div>
 </div>
-
-<h2>Почему этим урокам можно доверять</h2>
-<ul>
-  <li><strong>Учим навыкам, а не одной программе.</strong> Сервисы меняются и блокируются, а умение задать хороший вопрос и проверить ответ остаётся.</li>
-  <li><strong>Нейтрально к брендам.</strong> Каждое задание работает в любом ИИ-помощнике. <a href="instrumenty.html">Какой выбрать →</a></li>
-  <li><strong>Безопасность в каждом уроке.</strong> Что можно рассказывать ИИ, а что нельзя никогда.</li>
-  <li><strong>Шпаргалки для печати.</strong> К каждому уроку есть лист A4 крупным шрифтом. Его можно повесить на холодильник.</li>
-</ul>
 </main>
 <footer class="site-footer">
   <div class="inner">
-    ИИ — это просто — бесплатные уроки по ИИ для людей старшего возраста и их близких.
-    Материалы можно свободно печатать и раздавать.
+    <nav class="footer-nav" aria-label="Разделы внизу страницы">
+      <a href="index.html">Главная</a>
+      <a href="index.html#uroki">Уроки</a>
+      <a href="pomoshchniku.html">Учу родителей</a>
+      <a href="instrumenty.html">Какой ИИ выбрать</a>
+    </nav>
+    <p>ИИ — это просто — бесплатные уроки по ИИ для людей старшего возраста и их близких. Материалы можно свободно печатать и раздавать.</p>
   </div>
 </footer>
 </body>
