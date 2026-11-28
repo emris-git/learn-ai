@@ -58,7 +58,10 @@ python3 build.py                       # плеер появится на стр
 
 ## Публикация
 
-Сайт публикуется через GitHub Pages (`.github/workflows/pages.yml`) при каждом пуше в `master`. Один раз нужно включить: **Settings → Pages → Source: GitHub Actions**.
+Оба варианта собирают сайт `python3 build.py` и публикуют папку `site/`:
+
+- **Vercel** — настройки в `vercel.json`, production-деплой из `master`.
+- **GitHub Pages** — `.github/workflows/pages.yml`, при каждом пуше в `master`. Один раз нужно включить: **Settings → Pages → Source: GitHub Actions**.
 
 ## Документы
 
